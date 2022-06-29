@@ -1,14 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
 export default function Map() {
   // Create Dummy Data With Array
+  const cars = ['BMW', 'Ducati', 'Ferrari', 'Tesla']
 
   return (
     <View>
       <StatusBar />
-      {/* Code Here */}
+      <Text>This is List with MAP</Text>
+      {cars.map((car, idx) => (
+        <Text key={idx}>{car}</Text>
+      ))}
     </View>
   );
 }
